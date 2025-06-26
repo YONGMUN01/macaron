@@ -3,6 +3,7 @@ package macaron;
 import java.util.Scanner;
 
 public class MacaronMain {
+
    public static void main(String[] args) {
       
       Scanner sc = new Scanner(System.in);
@@ -46,7 +47,10 @@ public class MacaronMain {
          
          mc.order(name, num, item);
          
-			// 초기화 메소드 호출
+
+         // 초기화 메소드 호출
+        System.out.println(mc.reset("no"));
+
          
          // 주문 출력
 
@@ -60,5 +64,6 @@ public class MacaronMain {
       }
       
    }
+
 
 }
