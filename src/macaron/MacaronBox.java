@@ -2,38 +2,62 @@ package macaron;
 
 public class MacaronBox {
 
-	// 필드
-	String name;
-	int count;
-	int totlaPrice;
 	
-	String[] menu = {"값1", "값2", "값3", "값4", "값5"};
-	int[] price = {1, 10, 100, 1000, 10000};
-	String[] item = new String[100];
-	
-	
-	// order메소드 
-	void order(String name, int count, String item[]) {}
-	
-	
-	// print 메소드
-	void print() {
-	}
-	
-	
-	// addMacaron 메소드
-	void addMacaron() {
-		
-	}
-	
-	
-	// reset 메소드
-	void reset() {
-		
-	}
-	
-	
-	
-	
-	
+   // 필드
+   String name;
+   int count;
+   int totalPrice;
+   
+   String[] menu = {"초코맛", "딸기맛", "민트맛", "커피맛", "바닐라맛"};
+   int[] price = {2000, 2000, 2500, 3000, 3000};
+   String[] item = new String[100];
+   
+   
+   // order메소드 
+   void order(String name, int count, String item[]) {
+         this.name = name;
+         this.count = count;
+         for(int i = 0; i < count; i++) {
+            for(int j = 0; j < 5; j++) {
+               if(item[i].equals(this.menu[j])) {
+                  this.item[i] =  item[i];
+                  totalPrice += price[i]; 
+                  System.out.println(this.item[i]);
+               }
+            }
+         }
+         System.out.println(totalPrice);
+         
+               
+      }
+   
+   
+   // print 메소드
+   void print() {
+	   
+	   System.out.println("주문 메뉴는: " );
+	   for(int i = 0; i < count; i++) {
+		   
+		   System.out.println(this.item[i] + " : " + price[i] + "원");
+	   }
+	   System.out.println();
+	   System.out.println("총 금액은: " + totalPrice +"원"); 
+   }
+   
+   
+   // addMacaron 메소드
+   void addMacaron() {
+      
+   }
+   
+   
+   // reset 메소드
+   void reset() {
+      
+   }
+   
+   
+   
+   
+   
 }
