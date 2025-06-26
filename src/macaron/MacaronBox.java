@@ -2,6 +2,7 @@ package macaron;
 
 public class MacaronBox {
 
+
 	
    // 필드
    String name;
