@@ -16,13 +16,15 @@ public class MacaronMain {
       
             
       // 객체 생성
-      MacaronBox mc = new MacaronBox();
+
       
       while(totalSell > count) {
+    	  MacaronBox mc = new MacaronBox();
          // 이름 입력
          System.out.println("이름 입력 : ");
          name = sc.nextLine();
          System.out.print("몇 개의 마카롱을 구매하시겠습니까? : ");
+
          int num = sc.nextInt();      // 마카롱 주문 개수
          
          if(totalSell - count < num) {   // 마카롱개수가 남아있지 않을 때
@@ -32,6 +34,10 @@ public class MacaronMain {
       
          
          for(int i = 0; i < num; i++) {
+
+        	 System.out.println("어떤 마카롱을 구매하겠습니까: ?");
+
+
             item[i] = sc.next();
          }
          sc.nextLine();
@@ -41,11 +47,17 @@ public class MacaronMain {
          
          mc.order(name, num, item);
          
+
          // 초기화 메소드 호출
-         mc.reset();
+        System.out.println(mc.reset("no"));
+
          
          // 주문 출력
+
+         mc.print();
+
          
+
          
          // 상자담기
          
