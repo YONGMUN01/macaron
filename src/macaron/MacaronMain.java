@@ -9,7 +9,7 @@ public class MacaronMain {
 
 		String name; // 이름 저장 변수
 		int count = 0; // 현재 판매한 총 마카롱 개수
-		int totalSell = 10; // 준비한 마카롱 개수
+		int totalSell = 100; // 준비한 마카롱 개수
 		int totalPrice = 0;
 
 		String[] item = new String[100]; // 주문받은 마카롱값들 저장할 공간
