@@ -9,7 +9,8 @@ public class MacaronMain {
 
 		String name; // 이름 저장 변수
 		int count = 0; // 현재 판매한 총 마카롱 개수
-		int totalSell = 100; // 준비한 마카롱 개수
+		int totalSell = 10; // 준비한 마카롱 개수
+		int totalPrice = 0;
 
 		String[] item = new String[100]; // 주문받은 마카롱값들 저장할 공간
 
@@ -22,7 +23,7 @@ public class MacaronMain {
 			name = sc.nextLine(); // 이름 입력받기
 			System.out.println("\t\t[메뉴]\t\t");
 			System.out.println("[초코맛]  [딸기맛]  [민트맛]  [커피맛]  [바닐라맛]");
-			System.out.println("   (금일 저희가 준비한 마카롱은 총 100개입니다)");
+			System.out.println("   (금일 저희가 준비한 마카롱은 총 " + (totalSell - count) + "개입니다)");
 			System.out.print("몇 개의 마카롱을 구매하시겠습니까? : "); // 몇개 구매할지 물어보기
 
 			int num = sc.nextInt(); // 마카롱 주문 개수
@@ -77,13 +78,15 @@ public class MacaronMain {
 			System.out.println();
 
 			// 상자담기
-			mc.addMacaron();	// 박스에 담아서 포장준비
+			int n = mc.addMacaron();	// 박스에 담아서 포장준비
+			totalPrice += n;
 			
-			System.out.println("현재 남아있는 마카롱 개수 : " + (100 - count));	// 현재 남아있는 마카롱 개수
+			System.out.println("현재 남아있는 마카롱 개수 : " + (totalSell - count));	// 현재 남아있는 마카롱 개수
 			System.out.println("------------------------------------------");
 
 		}
 		System.out.println("오늘 준비한 마카롱이 전부 소진되었습니다. \n다음에 다시 찾아주세요!");
+		System.out.println("총 매출 : " + totalPrice);
 
 		sc.close();
 	}
