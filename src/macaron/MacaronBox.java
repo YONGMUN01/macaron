@@ -43,7 +43,7 @@ public class MacaronBox {
 	}
 
 	// addMacaron 메소드
-	void addMacaron() {		// 박스 포장 메소드
+	int addMacaron() {		// 박스 포장 메소드
 		int num = 1;	// 박스 1개부터 시작
 		for (int i = 0; i < count; i++) {	// 주문한 마카롱들 박스에 포장
 			if (i % 4 == 0) {	// 앞에 몇번째 박스인지 표기
@@ -58,6 +58,8 @@ public class MacaronBox {
 		}	
 		System.out.println("\n");
 		System.out.println(this.name + "님 주문한 메뉴가 준비완료되었습니다.\n");
+		return totalPrice;
+		
 	}
 
 	// reset 메소드
