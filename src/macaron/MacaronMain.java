@@ -89,6 +89,7 @@ public class MacaronMain {
 		System.out.println("총 매출 : " + totalPrice);
 
 		sc.close();
+		
 	}
 
 }

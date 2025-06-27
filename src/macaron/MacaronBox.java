@@ -59,6 +59,7 @@ public class MacaronBox {
 		System.out.println("\n");
 		System.out.println(this.name + "님 주문한 메뉴가 준비완료되었습니다.\n");
 		return totalPrice;
+		
 	}
 
 	// reset 메소드
