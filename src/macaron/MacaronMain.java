@@ -26,7 +26,7 @@ public class MacaronMain {
 			System.out.print("몇 개의 마카롱을 구매하시겠습니까? : "); // 몇개 구매할지 물어보기
 
 			int num = sc.nextInt(); // 마카롱 주문 개수
-			sc.nextLine();
+			sc.nextLine();	// 위의 sc.nextInt()로 인해 버퍼에 저장되있는 엔터 삭제
 
 			if (totalSell - count < num) { // 마카롱개수가 남아있지 않을 때
 				System.out.println("그만한 수량이 남아있지 않습니다.");
@@ -54,6 +54,7 @@ public class MacaronMain {
 				}
 			}
 			sc.nextLine();	// 위의 sc.next()로 인해 버퍼에 저장되있는 엔터 삭제
+			System.out.println();
 
 			// 주문 메소드 호출
 			mc.order(name, num, item);	// 이름, 주문개수, 주문 종류 인자로 사용

@@ -26,7 +26,8 @@ public class MacaronBox {
 			}
 		}
 
-	}
+   }
+
 
 	// print 메소드
 	void print() {	// 영수증 출력 메소드
@@ -82,5 +83,6 @@ public class MacaronBox {
 		
 		return num;		// num값 리턴
 	}
+
 
 }
